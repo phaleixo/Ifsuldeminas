@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFSULDEMINAS - Sistemas</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'ifsul-green': '#006400',
+              'ifsul-light-green': '#008000',
+            }
+          }
+        }
+      }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body class="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans transition-colors duration-300">
+    
+    <button id="installButton" class="hidden fixed top-4 right-4 z-50 bg-blue-600 text-white px-4 py-2 rounded-lg border-none cursor-pointer">Instalar App</button>
+
+    <nav class="bg-gradient-to-r from-ifsul-green to-ifsul-light-green shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a class="text-xl font-bold text-white" href="#">IFSULDEMINAS</a>
+            
+            <button id="theme-toggle" class="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white">
+                <i id="theme-icon" class="fas fa-moon text-white text-lg"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <main class="flex-grow">
+        <div class="bg-gradient-to-r from-ifsul-green to-ifsul-light-green pt-8 pb-12 px-4 text-center">
+            <div class="flex justify-center mb-4">
+                <div class="relative">
+                    <img src="src/img/logo.png" alt="Logo" class="w-24 h-24 rounded-full shadow-lg border-4 border-white">
+                    <div class="absolute -bottom-1 -right-1 w-8 h-8 bg-white rounded-full flex items-center justify-center border-2 border-ifsul-green">
+                        <i class="fas fa-check text-ifsul-green text-xs"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <h1 class="text-2xl font-bold text-white">IFSULDEMINAS</h1>
+            <p class="text-white opacity-90 mt-1">Acesso rápido aos sistemas</p>
+        </div>
+        
+        <div class="w-full max-w-md mx-auto px-4 -mt-8">
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 mb-6">
+                <h2 class="text-lg font-semibold text-center mb-4">Sistemas Institucionais</h2>
+                
+                <a href="https://pas.ava.ifsuldeminas.edu.br/" target="_blank" class="flex items-center w-full p-4 mb-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 border-l-4 border-ifsul-green">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-green-100 dark:bg-green-900/30 mr-3">
+                        <i class="fas fa-graduation-cap text-green-600 dark:text-green-400 text-lg"></i>
+                    </div>
+                    <div class="flex-1">
+                        <span class="font-medium text-lg block">Ambiente Virtual</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Acessar o AVA</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400 ml-2"></i>
+                </a>
+                
+                <a href="https://suap.ifsuldeminas.edu.br/" target="_blank" class="flex items-center w-full p-4 mb-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 border-l-4 border-ifsul-green">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 mr-3">
+                        <i class="fas fa-user-circle text-blue-600 dark:text-blue-400 text-lg"></i>
+                    </div>
+                    <div class="flex-1">
+                        <span class="font-medium text-lg block">Portal do Aluno</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Acessar o SUAP</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400 ml-2"></i>
+                </a>
+                
+                <a href="https://docs.google.com/spreadsheets/d/1Fe0KtOfypChXEM2iFcLHrFODZ4mCs8kiXfWVkHnQvo0/edit?pli=1&gid=156088371#gid=156088371" class="flex items-center w-full p-4 mb-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 border-l-4 border-ifsul-green">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-purple-100 dark:bg-purple-900/30 mr-3">
+                        <i class="fas fa-calendar-alt text-purple-600 dark:text-purple-400 text-lg"></i>
+                    </div>
+                    <div class="flex-1">
+                        <span class="font-medium text-lg block">Calendário Acadêmico</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Eventos e datas</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400 ml-2"></i>
+                </a>
+                
+                <a href="https://biblioteca.ifsuldeminas.edu.br/biblioteca/index.php" class="flex items-center w-full p-4 mb-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 border-l-4 border-ifsul-green">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-red-100 dark:bg-red-900/30 mr-3">
+                        <i class="fas fa-book text-red-600 dark:text-red-400 text-lg"></i>
+                    </div>
+                    <div class="flex-1">
+                        <span class="font-medium text-lg block">Biblioteca Digital</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Acervo e materiais</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400 ml-2"></i>
+                </a>
+            </div>
+            
+            
+        </div>
+    </main>
+    
+    <footer class="w-full text-center p-6 bg-gray-100 dark:bg-gray-800">
+        <div class="text-sm text-gray-500 dark:text-gray-400">
+            <p class="font-medium">App não afiliado ao Instituto Federal do Sul de Minas</p>
+            <p class="mt-1">v 1.1.0 &copy; 2025 - Licença GPL</p>
+            <i class="fab fa-github mr-2"></i>
+            <a href="https://github.com/phaleixo/ifsuldeminasLinks">Github</a>
+        </div>
+    </footer>
+    
+    <script>
+        // Script para alternância de tema
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                document.getElementById('theme-icon').classList.remove('fa-sun');
+                document.getElementById('theme-icon').classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                document.getElementById('theme-icon').classList.remove('fa-moon');
+                document.getElementById('theme-icon').classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Verificar preferência de tema salva
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+            document.getElementById('theme-icon').classList.remove('fa-moon');
+            document.getElementById('theme-icon').classList.add('fa-sun');
+        } else {
+            document.documentElement.classList.remove('dark');
+            document.getElementById('theme-icon').classList.remove('fa-sun');
+            document.getElementById('theme-icon').classList.add('fa-moon');
+        }
+
+        // Feedback tátil para os cartões
+        const linkCards = document.querySelectorAll('a');
+        linkCards.forEach(card => {
+            card.addEventListener('touchstart', function() {
+                this.classList.add('opacity-80');
+            });
+            
+            card.addEventListener('touchend', function() {
+                this.classList.remove('opacity-80');
+            });
+        });
+    </script>
+</body>
+</html>
