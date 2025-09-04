@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IFSULDEMINAS - Sistemas</title>
     
-    <!-- Manifest e tema -->
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#006400">
     
-    <!-- Carrega primeiro o Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="src/js/main.js"></script>
     <script src="service-worker.js"></script>
@@ -20,14 +18,16 @@
 <body class="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans transition-colors duration-300">
     
     <button id="installButton" class="hidden fixed top-4 right-4 z-50 bg-blue-600 text-white px-4 py-2 rounded-lg border-none cursor-pointer">Instalar App</button>
-
     
+    <div class="absolute top-4 right-4 z-50">
+        <button id="theme-toggle" class="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white">
+            <i id="theme-icon" class="fas fa-moon text-white text-lg"></i>
+        </button>
+    </div>
     
     <main class="flex-grow">
         <div class="bg-gradient-to-r from-ifsul-green to-ifsul-light-green pt-8 pb-12 px-4 text-center">
-            <button id="theme-toggle" class="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white">
-                <i id="theme-icon" class="fas fa-moon text-white text-lg"></i>
-            </button>
+            
             <div class="flex justify-center mb-4">
                 <div class="relative">
                     <img src="src/img/logo.png" alt="Logo" class="w-24 h-24 rounded-full shadow-lg border-4 border-white">
