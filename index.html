@@ -5,21 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IFSULDEMINAS - Sistemas</title>
     
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Manifest e tema -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#006400">
     
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              'ifsul-green': '#006400',
-              'ifsul-light-green': '#008000',
-            }
-          }
-        }
-      }
-    </script>
+    <!-- Carrega primeiro o Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="src/js/main.js"></script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
@@ -101,8 +93,6 @@
                     <i class="fas fa-chevron-right text-gray-400 ml-2"></i>
                 </a>
             </div>
-            
-            
         </div>
     </main>
     
@@ -111,48 +101,8 @@
             <p class="font-medium">App não afiliado ao Instituto Federal do Sul de Minas</p>
             <p class="mt-1">v 1.1.0 &copy; 2025 - Licença GPL</p>
             <i class="fab fa-github mr-2"></i>
-            <a href="https://github.com/phaleixo/ifsuldeminasLinks">Github</a>
+            <a href="https://github.com/phaleixo/ifsuldeminas">Github</a>
         </div>
     </footer>
-    
-    <script>
-        // Script para alternância de tema
-        document.getElementById('theme-toggle').addEventListener('click', function() {
-            if (document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.remove('dark');
-                document.getElementById('theme-icon').classList.remove('fa-sun');
-                document.getElementById('theme-icon').classList.add('fa-moon');
-                localStorage.setItem('theme', 'light');
-            } else {
-                document.documentElement.classList.add('dark');
-                document.getElementById('theme-icon').classList.remove('fa-moon');
-                document.getElementById('theme-icon').classList.add('fa-sun');
-                localStorage.setItem('theme', 'dark');
-            }
-        });
-
-        // Verificar preferência de tema salva
-        if (localStorage.getItem('theme') === 'dark') {
-            document.documentElement.classList.add('dark');
-            document.getElementById('theme-icon').classList.remove('fa-moon');
-            document.getElementById('theme-icon').classList.add('fa-sun');
-        } else {
-            document.documentElement.classList.remove('dark');
-            document.getElementById('theme-icon').classList.remove('fa-sun');
-            document.getElementById('theme-icon').classList.add('fa-moon');
-        }
-
-        // Feedback tátil para os cartões
-        const linkCards = document.querySelectorAll('a');
-        linkCards.forEach(card => {
-            card.addEventListener('touchstart', function() {
-                this.classList.add('opacity-80');
-            });
-            
-            card.addEventListener('touchend', function() {
-                this.classList.remove('opacity-80');
-            });
-        });
-    </script>
 </body>
 </html>
