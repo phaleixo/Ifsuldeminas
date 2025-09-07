@@ -2,10 +2,10 @@
     "name": "IFSULDEMINAS",
     "short_name": "IFSUL",
     "description": "Um serviço para agregar links utéis.",
-    "start_url": "/index.html",
+    "start_url": "./index.html",
     "display": "standalone",
-    "background_color": "#006400",
-    "theme_color": "#006400",
+    "background_color": "#2e8b57",
+    "theme_color": "#2e8b57",
     "icons": [
       {
         "src": "src/img/logo.png",
